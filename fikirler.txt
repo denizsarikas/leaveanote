@@ -1,0 +1,13 @@
+-onBlur gibi modal dışına tıklantığında form kaybolsun
+-yorumlara + - verme özelliği
+-kullanıcılara ozel hale getirme
+-kullanıcının cevap verme hakkı
+-date fns
+-makyaj
+-responsiveness
+-backend
+-dbden gelen verileri maple
+-post
+-hover effects on the buttons
+
+-main ismuted false olduğunda video neden oynamıyor?
