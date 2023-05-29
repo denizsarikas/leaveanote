@@ -49,48 +49,49 @@ export default function Main() {
 
 
                     {modal && (
-                        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  bg-red-500 w-1/3 h-1/3">
+                        <div className="absolute top-0 right-0 left-0 bottom-0 m-auto bg-red-500 w-1/3 h-2/3">
 
-                            <div className="relative">
-                                <button className="absolute right-0 top-0" onClick={() => setModal(false)}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </button>
+                            <button className="absolute right-0 top-0" onClick={() => setModal(false)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </button>
 
+                            <div className="flex flex-col gap-4 h-full">
 
-                                <div className="flex flex-col pt-12 gap-2">
-
-                                    <div className="flex flex-col w-5/6 mx-auto gap-1">
-                                        <div className="flex">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-                                            </svg>
-                                            <span className="text-center">Kendinle ilgili bir ipucu</span>
-                                        </div>
-                                        <input className="w-full" placeholder="eski bir dost" />
-                                    </div>
-
-                                    <div className="flex flex-col w-5/6 mx-auto gap-1">
-                                        <div className="flex">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-                                            </svg>
-                                            <span className="text-center" >Notun</span>
-                                        </div>
-                                        <textarea className="w-full" placeholder="Sen bu satırları okurken ben çok uzaklarda olacağım..." />
-                                    </div>
-
-
-                                    <button className="border border-3 border-gray-500 mx-auto flex bg-blue-500 text-white">
-                                        Gönder
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                                <div className="flex flex-col w-5/6 mx-auto gap-1 mt-auto">
+                                    <div className="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                            <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clipRule="evenodd" />
                                         </svg>
-                                    </button>
+
+                                        <span className="text-2xl font-bold">Kendinle ilgili bir ipucu</span>
+                                    </div>
+                                    <input className="w-full" placeholder="eski bir dost" />
                                 </div>
 
+                                <div className="flex flex-col w-5/6 mx-auto gap-1">
+                                    <div className="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                                            <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                            <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                                        </svg>
+
+                                        <span className="text-2xl font-bold" >Notun</span>
+                                    </div>
+                                    <textarea className="w-full" placeholder="Sen bu satırları okurken ben çok uzaklarda olacağım..." />
+                                </div>
+
+
+                                <button className="border border-3 border-gray-500 mx-auto flex bg-blue-500 text-white mb-auto p-2 ">
+                                    Gönder
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                                    </svg>
+                                </button>
                             </div>
+
+
 
                         </div>
                     )}
