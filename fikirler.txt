@@ -1,13 +1,21 @@
+------------------------------------------------------
+YAPILACAKLAR:
+
 -onBlur gibi modal dışına tıklantığında form kaybolsun
 -yorumlara + - verme özelliği
 -kullanıcılara ozel hale getirme
 -kullanıcının cevap verme hakkı
--date fns
--makyaj
--responsiveness
+
+
+--------------------------------------------------
+TAMAMLANANLAR:
+
 -backend
 -dbden gelen verileri maple
 -post
+-date fns
+-makyaj
 -hover effects on the buttons
-
+-responsiveness
+--------------------------------------------------
 -main ismuted false olduğunda video neden oynamıyor?

@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .new-note{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);  
+} */
+
+
+.text-shadow-head{
+    text-shadow: 0 0 10px #f7d29b,
+                0 0 20px #f7d29b,
+                0 0 40px #f7d29b,
+                0 0 80px #f7d29b,
+                0 0 120px #f7d29b;
+}
+
+.text-shadow-hint{
+    text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 40px #00b3ff,
+                0 0 80px #00b3ff,
+                0 0 120px #00b3ff;
+}
+
+.text-shadow-message{
+    text-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 120px #fff;
+}
+
+.text-shadow-time{
+    text-shadow: 0 0 10px #ffffa6,
+                0 0 20px #ffffa6,
+                0 0 40px #ffffa6,
+                0 0 80px #ffffa6,
+                0 0 120px #ffffa6;
+}
+
+.text-shadow-form{
+    text-shadow: 0 0 10px #69C1B7,
+                0 0 20px #69C1B7,
+                0 0 40px #69C1B7,
+                0 0 80px #69C1B7,
+                0 0 120px #69C1B7;
+}
+
+
+/* 
+
+#153A42
+f47b89
+text-[#69C1B7]
+
+ w-5/6 mx-auto md:w-1/2
+
+
+*/
