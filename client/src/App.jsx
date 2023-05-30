@@ -4,7 +4,7 @@ import { ToastContainer } from 'react-toastify';
 
 export default function App() {
 
-  axios.defaults.baseURL = "http://localhost:4000/api";
+  axios.defaults.baseURL = "https://leaveanote.vercel.app/api";
   // axios.defaults.withCredentials = true;
   return (
     <>
