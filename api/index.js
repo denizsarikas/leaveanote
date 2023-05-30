@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors());
 
 // console.log(process.env.MONGO_URL)
-mongoose.connect(process.env.MONGO_URL);
+// mongoose.connect(process.env.MONGO_URL);
 
 app.get('/api/test', (req, res) => {
     res.json('backend running');
@@ -23,7 +23,7 @@ app.get('/api/test', (req, res) => {
 
 
 app.post('/api/message', async (req, res) => {
-    // mongoose.connect(process.env.MONGO_URL);
+    mongoose.connect(process.env.MONGO_URL);
     const { message, hint } = req.body;
     // res.json({name, email, password});
     try {
@@ -38,7 +38,7 @@ app.post('/api/message', async (req, res) => {
 })
 
 app.get('/api/message', async (req, res) => {
-    // mongoose.connect(process.env.MONGO_URL);
+    mongoose.connect(process.env.MONGO_URL);
     res.json(await Note.find())
 })
 
