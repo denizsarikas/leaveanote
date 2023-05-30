@@ -5,6 +5,8 @@ YAPILACAKLAR:
 -yorumlara + - verme özelliği
 -kullanıcılara ozel hale getirme
 -kullanıcının cevap verme hakkı
+-pagination sayfa tasması sorunu
+-yenilemeden goruntulenmesi
 
 
 --------------------------------------------------
