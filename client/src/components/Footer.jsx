@@ -1,6 +1,6 @@
 import footerbg from '../assets/footerbg.jpg';
 
-export default function BlockingLogo() {
+export default function Footer() {
 
   // const divStyle = {
   //   backgroundImage: `url(${footerbg})`,
