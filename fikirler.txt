@@ -7,6 +7,9 @@ YAPILACAKLAR:
 -kullanıcının cevap verme hakkı
 -pagination sayfa tasması sorunu
 -yenilemeden goruntulenmesi
+-yukarda birikmesi ve cevaplananların pagination halinde gözükmesi.
+-backend tarafından gelen responsların tam olarak erroryu veya anlamlı cevaplar ve status kodlar gondermesi
+-backendlerdeki tum durumlar dusunulerek hareket edilmesi veona göre responslar ayarlanması aynı isim boş gönderilmesi vs
 
 
 --------------------------------------------------
@@ -21,3 +24,15 @@ TAMAMLANANLAR:
 -responsiveness
 --------------------------------------------------
 -main ismuted false olduğunda video neden oynamıyor?
+
+------------------------------------------------------
+
+D:\Github\leaveanote\api\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185
+          const err = new MongooseError(message);
+                      ^
+
+MongooseError: Operation `notes.find()` buffering timed out after 10000ms
+    at Timeout.<anonymous> (D:\Github\leaveanote\api\node_modules\mongoose\lib\drivers\node-mongodb-native\collection.js:185:23)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[nodemon] app crashed - waiting for file changes before starting...

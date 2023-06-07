@@ -23,8 +23,8 @@ export default function Login() {
 }
 
   return (
-      <div className="flex flex-col items-center justify-center">
-        <div className='align-center justify-center mt-12 w-1/2'>
+      <div className="flex flex-col items-center">
+        <div className='align-center justify-center mt-12 w-full md:w-1/2'>
           <form onSubmit={handleLogin} className="justify-center flex flex-col w-full  ">
             <div className="flex flex-col w-5/6 mx-auto p-4">
               <div className="flex items-center">
@@ -65,12 +65,12 @@ export default function Login() {
               <button className="relative px-6 py-3 font-bold text-white rounded-lg group">
                 <span className="absolute inset-0 w-full h-full transition duration-300 transform -translate-x-1 -translate-y-1 bg-purple-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0"></span>
                 <span className="absolute inset-0 w-full h-full transition duration-300 transform translate-x-1 translate-y-1 bg-pink-800 ease opacity-80 group-hover:translate-x-0 group-hover:translate-y-0 mix-blend-screen"></span>
-                <span className="relative">Gönder</span>
+                <span className="relative">Giriş yap</span>
               </button>
             </div>
-            <div className='text-white text-2xl'>
-              Hesabın yok mu? <Link to="/register">Kayıt ol.</Link>
-            </div>
+            <div className='text-white text-2xl text-center group m-4  text-shadow-form w-full'>
+            Hesabın yok mu? <Link className='group-hover:bg-red-900 rounded-2xl p-2 italic' to="/register">Kayıt ol.</Link>
+          </div>
           </form>
         </div>
       </div>

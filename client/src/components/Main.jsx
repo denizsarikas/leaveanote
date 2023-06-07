@@ -9,14 +9,14 @@ export default function Main() {
 
     return (
 
-        <div>
+        <div className="">
             <div className="flex flex-col">
+
                 <button
                     onClick={() => setModal(!modal)}
                     className="mx-auto text-3xl text-[#ffffd2] font-bold tracking-widest text-shadow-head p-10 hover:underline hover:italic hover:uppercase"
                 >
                     Leave your own note.
-                    
                 </button>
                 {modal && (
                     <NoteForm setModal={setModal} />

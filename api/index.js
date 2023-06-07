@@ -2,6 +2,8 @@
 const express = require('express');
 const cors = require('cors');
 const { mongoose } = require('mongoose');
+const bcrypt = require('bcryptjs');
+const User = require('./models/UserModel');
 
 
 const Note = require('./models/noteModel');
@@ -11,6 +13,8 @@ require('dotenv').config()
 
 const app = express();
 
+const bcryptSalt = bcrypt.genSaltSync(10);
+
 app.use(express.json());
 app.use(cors());
 
@@ -19,6 +23,23 @@ app.use(cors());
 
 app.get('/api/test', (req, res) => {
     res.json('backend running');
+})
+
+app.post('/api/register', async (req, res) => {
+    // mongoose.connect(process.env.MONGO_URL);
+    const { name, email, password } = req.body;
+    // res.json({name, email, password});
+    try {
+        const userDoc = await User.create({
+            name,
+            email,
+            password: bcrypt.hashSync(password, bcryptSalt),
+            verified: false,
+        });
+        res.json(userDoc);
+    } catch (e) {
+        res.status(422).json(e);
+    }
 })
 
 
@@ -37,9 +58,18 @@ app.post('/api/message', async (req, res) => {
     }
 })
 
+// app.get('/api/message', async (req, res) => {
+//     mongoose.connect(process.env.MONGO_URL);
+//     res.json(await Note.find())
+// })
+
 app.get('/api/message', async (req, res) => {
-    mongoose.connect(process.env.MONGO_URL);
-    res.json(await Note.find())
+     mongoose.connect(process.env.MONGO_URL);
+    try {
+        res.json(await Note.find())
+    } catch (e) {
+        res.status(500).json('bir sorun oldu');
+    }
 })
 
 // app.listen(4000);
