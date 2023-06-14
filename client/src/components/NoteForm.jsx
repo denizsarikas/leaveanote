@@ -11,7 +11,8 @@ export default function NoteForm({ setModal }) {
         ev.preventDefault();
         try {
             // const response = await axios.post('/message', { message, hint });
-            await axios.post('/message', { message, hint });
+            // await axios.post('/message', { message, hint });
+            await axios.post('/note', { message, hint });
             setModal(false);
             toast("Yazdıgın sey gonderildi ama goruntulenmesi icin yenilemen lazım daha o kısmı yapmadım .d")
             // setRedirect(true);

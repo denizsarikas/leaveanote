@@ -3,10 +3,10 @@ const express = require('express');
 const cors = require('cors');
 const { mongoose } = require('mongoose');
 const bcrypt = require('bcryptjs');
-const User = require('./models/UserModel');
+const User = require('./modals/UserModel');
 
 
-const Note = require('./models/noteModel');
+const Note = require('./modals/noteModal');
 
 require('dotenv').config()
 

@@ -8,7 +8,8 @@ export default function Notes() {
     const [messages, setMessages] = useState(null);
 
     useEffect(() => {
-        axios.get('/message').then(({ data }) => {
+        // axios.get('/message').then(({ data }) => {
+        axios.get('/note').then(({ data }) => {
              setMessages(data);
             // setMessages([...data, ...data, ...data, ...data])
         });
