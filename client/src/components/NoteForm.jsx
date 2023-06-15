@@ -60,7 +60,7 @@ export default function NoteForm({ setModal }) {
                         value={message}
                         onChange={ev => setMessage(ev.target.value)}
                         placeholder="Sen bu satırları okurken ben çok uzaklarda olacağım..."
-                        required="true"
+                        required={true}
                     />
                 </div>
                 <div className=" mx-auto flex p-2 ">

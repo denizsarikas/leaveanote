@@ -11,6 +11,9 @@ YAPILACAKLAR:
 -backend tarafından gelen responsların tam olarak erroryu veya anlamlı cevaplar ve status kodlar gondermesi
 -backendlerdeki tum durumlar dusunulerek hareket edilmesi veona göre responslar ayarlanması aynı isim boş gönderilmesi vs
 -header active özelliği eklenmesi.
+-register olduğunda verification için mail.
+-login olduğunda login ve register yazıları yerine logout gozukmesi
+-logout function
 
 --------------------------------------------------
 TAMAMLANANLAR:
@@ -23,6 +26,8 @@ TAMAMLANANLAR:
 -hover effects on the buttons
 -responsiveness
 -backend mvc yapısına çevrildi.
+-register yapılabiliyor
+-login olunabiliyor
 
 --------------------------------------------------
 -main ismuted false olduğunda video neden oynamıyor?

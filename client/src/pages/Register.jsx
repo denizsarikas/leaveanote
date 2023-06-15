@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { toast } from "react-toastify";
+import axios from 'axios'
 
 
 export default function Register() {
@@ -12,14 +13,12 @@ export default function Register() {
   async function handleRegister(ev) {
     ev.preventDefault();
     try {
-      // const response = await axios.post('/message', { message, hint });
-      // await axios.post('/message', { message, hint });
-      // setModal(false);
-      toast("Yazdıgın sey gonderildi ama goruntulenmesi icin yenilemen lazım daha o kısmı yapmadım .d")
+       await axios.post('/user/register', { name, email, password });
+      toast("Kullanıcı oluşturuldu.")
       // setRedirect(true);
     } catch (e) {
       console.log(e)
-      // alert(e.response.data)
+      toast(e.response.data)
     }
   }
 
@@ -37,9 +36,9 @@ export default function Register() {
             </div>
             <input
               className="w-full rounded-xl p-2 mt-3"
-              type="text"
+              type="email"
               placeholder="ornek@mail.com"
-              required="true"
+              required={true}
               value={email}
               onChange={ev => setEmail(ev.target.value)}
             />
@@ -56,7 +55,7 @@ export default function Register() {
               className="w-full rounded-xl p-2 mt-3"
               type="text"
               placeholder="Adın"
-              required="true"
+              required={true}
               value={name}
               onChange={(ev) => setName(ev.target.value)}
             />
@@ -73,7 +72,7 @@ export default function Register() {
               type='password'
               className="w-full rounded-xl p-2 mt-3"
               placeholder="*******"
-              required="true"
+              required={true}
               value={password}
               onChange={(ev) => setPassword(ev.target.value)}
             />
