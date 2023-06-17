@@ -2,12 +2,14 @@ const User = require("../modals/userModal");
 const { mongoose } = require("mongoose");
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
+const { validate } = require("../modals/noteModal");
 const bcryptSalt = bcrypt.genSaltSync(10);
 const jwtSecret = 'secret12345';
 
-//get all notes
+
+
+//register user 
 const registerUser = async (req, res) => {
-    // mongoose.connect(process.env.MONGO_URL);
     const { name, email, password } = req.body;
     // res.json({name, email, password});
     try {
@@ -23,7 +25,8 @@ const registerUser = async (req, res) => {
     }
 };
 
-//create note
+
+//login user
 const loginUser = async (req, res) => {
     // mongoose.connect(process.env.MONGO_URL);
     const { email, password } = req.body;
